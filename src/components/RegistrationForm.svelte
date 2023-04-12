@@ -11,6 +11,7 @@
     $: {
         backgroundColor = $state ? '#36393F' : 'whitesmoke';
         formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'white';
+        textColor = $state ? 'whitesmoke' : 'black';
     }
 
 </script>
@@ -35,6 +36,7 @@
                 <i class="fa-regular fa-envelope"></i>
                 <input type="text" placeholder="email address" 
                 style:background-color={formFieldsColor}
+                style:color={textColor}
                 >
             </div>
 
@@ -42,6 +44,7 @@
                 <i class="fa-solid fa-user-pen"></i>
                 <input type="text" placeholder="username" 
                 style:background-color={formFieldsColor}
+                style:color={textColor}
                 >
             </div>
 
@@ -49,6 +52,7 @@
                 <i class="fa-solid fa-key"></i>
                 <input type="text" placeholder="password" 
                 style:background-color={formFieldsColor}
+                style:color={textColor}
                 >
             </div>
 
@@ -56,6 +60,7 @@
                 <i class="fa-solid fa-unlock-keyhole"></i>
                 <input type="text" placeholder="confirm password" 
                     style:background-color={formFieldsColor}
+                    style:color={textColor}
                 >
             </div>
         </div>
