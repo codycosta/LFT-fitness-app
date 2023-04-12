@@ -142,5 +142,16 @@
             width: 80%;
             box-shadow: none;
         }
+
+        .contact-information {
+            flex-direction: column;
+            align-items: center;
+            gap: 2ch;
+            padding: 2.2ch;
+        }
+
+        .contact-information input {
+            width: 100%;
+        }
     }
 </style>

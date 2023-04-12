@@ -49,13 +49,13 @@
         flex: 0 0 auto;
         border-radius: 8px;
         background-color: whitesmoke;
-        width: clamp(200px, 20vw, 400px);
+        width: clamp(150px, 15vw, 400px);
         aspect-ratio: 4/5;
         height: auto;
         box-shadow: 0px 20px 30px lightgray;
         /* text-align: center; */
         color: darkslategrey;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-family: 'Rubik';
         padding: 2ch;
         transition: 500ms;
@@ -107,7 +107,7 @@
 
     .card-stack:hover #hidden {
         width: 90vw;
-        height: clamp(250px, 25vw, 500px);
+        height: clamp(190px, 18.75vw, 500px);
     }
 
     .card-stack:hover #top-card {
@@ -149,6 +149,53 @@
     @media screen and (max-width: 500px) {
         .card {
             font-size: 1rem;
+        }
+
+        #hidden {
+            transition: 500ms;
+        }
+
+        .card-stack:hover #top-card {
+            transform: translate(0vw, 0vh) rotate(0deg);
+        }
+
+        .card-stack:hover #card-2 {
+            transform: translate(0vw, 35vh) rotate(0deg);
+        }
+
+        .card-stack:hover #card-3 {
+            transform: translate(0vw, 70vh) rotate(0deg);
+        }
+
+        .card-stack:hover #card-4 {
+            transform: translate(0vw, 105vh) rotate(0deg);
+        }
+
+
+        .card-stack:hover #top-card:hover {
+            transform: translate(0vw, 0vh) scale(1.05);
+            z-index: 2;
+        }
+
+        .card-stack:hover #card-2:hover {
+            transform: translate(0vw, 35vh) scale(1.05);
+            z-index: 2;
+        }
+
+        .card-stack:hover #card-3:hover {
+            transform: translate(0vw, 70vh) scale(1.05);
+            z-index: 2;
+        }
+
+        .card-stack:hover #card-4:hover {
+            transform: translate(0vw, 105vh) scale(1.05);
+            z-index: 2;
+        }
+
+        .card-stack:hover #hidden {
+            width: 200px;
+            /* height: clamp(190px, 18.75vw, 500px); */
+            height: 120vh;
         }
     }
 </style>

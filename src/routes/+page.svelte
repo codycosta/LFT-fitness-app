@@ -90,9 +90,6 @@
 
     <div class="section-break">
         <p>contact <strong style:color={sectionBreakStrongWordColor}>us</strong></p>
-        <!-- <p class="section-support-description">
-            enjoying LFT or have questions/ideas? Let us know!
-        </p> -->
     </div>
 
     <ContactForm />
