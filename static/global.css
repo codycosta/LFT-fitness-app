@@ -1,0 +1,20 @@
+.content-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content-card {
+    box-shadow: -0px 30px 30px lightgray;
+    border-radius: 10px;
+    width: clamp(350px, 30vw, 600px);
+    padding: 3ch;
+    text-align: center;
+    font-family: 'Rubik';
+    color: darkgray;
+    background-color: whitesmoke;
+}
+
+.content-card h5 {
+    font-size: 1.5rem;
+    color: cornflowerblue;
+}
