@@ -13,7 +13,7 @@
 </script>
 
 <div class="content-card-wrapper">
-    <div>
+    <div class="enjoy-fitness-phrase">
         <hr>
         <h5>Enjoy simplified fitness <i class="fa-solid fa-heart-pulse"></i></h5>
         <hr>
@@ -94,6 +94,10 @@
             flex-direction: column;
             align-items: center;
             gap: 5ch;
+        }
+
+        .enjoy-fitness-phrase {
+            text-align: center;
         }
     }
 </style>

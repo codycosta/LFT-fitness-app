@@ -21,5 +21,12 @@
 
     img {
         border-radius: 10px;
+        width: 50vw;
+    }
+
+    @media screen and (max-width: 500px) {
+        .message {
+            font-size: 1rem;
+        }
     }
 </style>

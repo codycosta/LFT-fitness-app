@@ -137,4 +137,19 @@
     .section-break img {
         width: 15vw;
     }
+
+    @media screen and (max-width: 500px) {
+        .section-break {
+            font-size: 2rem;
+            margin-top: 40vw;
+        }
+
+        .section-support-description {
+            font-size: 0.7rem;
+        }
+
+        .section-break img {
+            width: 30vw;
+        }
+    }
 </style>

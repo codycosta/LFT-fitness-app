@@ -12,7 +12,7 @@
 </script>
 
 <nav class="navigator-bar" style="background-color: {navBackgroundColor};">
-    <a href="/register" class="right"><i class="fa-solid fa-user-plus"></i></a>
+    <a href="/register" class="right" id="register-link"><i class="fa-solid fa-user-plus"></i></a>
     <a href="/login" class="right"><i class="fa-solid fa-right-to-bracket"></i></a>
     <a href="/">L F T <span>(pre-alpha)</span></a>
 
@@ -48,5 +48,20 @@
 
     .right {
         float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+        .navigator-bar {
+            font-size: 1rem;
+            padding: 1.5ch;
+        }
+
+        .navigator-bar a {
+            padding: 0px 1ch;
+        }
+
+        #register-link {
+            padding-right: 3ch;
+        }
     }
 </style>

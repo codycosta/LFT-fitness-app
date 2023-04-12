@@ -70,4 +70,20 @@
     .slider.round::before {
         border-radius: 50%;
     }
+
+    @media screen and (max-width: 500px) {
+        .switch {
+            width: 43px;
+            height: 25px;
+        }
+
+        .slider::before {
+            height: 18px;
+            width: 18px;
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(18px);
+        }
+    }
 </style>

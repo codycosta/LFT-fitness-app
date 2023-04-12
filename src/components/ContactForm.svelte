@@ -10,7 +10,7 @@
 
     $: {
         formBackdropColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '10px 20px 30px lightgray';
+        boxShadow = $state ? 'none' : '0px 30px 30px lightgray';
         formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'white';
         textColor = $state ? 'whitesmoke' : 'black';
     }
@@ -55,7 +55,7 @@
         padding: 3ch;
         border-radius: 10px;
         width: 40%;
-        box-shadow: 10px 20px 30px lightgray;
+        /* box-shadow: 10px 20px 30px lightgray; */
     }
 
     .title {
@@ -132,6 +132,15 @@
         .wrapper {
             flex-direction: column;
             align-items: center;
+        }
+
+        img {
+            width: 30vw;
+        }
+
+        .contact-form {
+            width: 80%;
+            box-shadow: none;
         }
     }
 </style>
