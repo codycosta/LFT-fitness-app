@@ -20,8 +20,8 @@
             <p>your one stop <span id="exercise">exercise</span> tracker</p>
             <!-- <p>completely free</p> -->
             <div class="buttons">
-                <button><i class="fa-solid fa-user-plus"></i></button>
-                <button><i class="fa-solid fa-right-to-bracket"></i></button>
+                <a href="/register"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
             </div>
         </div>
     </div>
@@ -32,8 +32,8 @@
             <p>your one stop <span id="nutrition">nutrition</span> tracker</p>
             <!-- <p>completely free</p> -->
             <div class="buttons">
-                <button><i class="fa-solid fa-user-plus"></i></button>
-                <button><i class="fa-solid fa-right-to-bracket"></i></button>
+                <a href="/register"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
             </div>
         </div>
     </div>
@@ -113,13 +113,24 @@
         }
     } */
 
-    .buttons button {
+    .buttons {
         outline: none;
         border: hidden;
         border-radius: 5px;
         padding: 2ch;
         margin: 0 2ch;
+        font-size: 1rem;
+        z-index: 5;
     }
+
+    .buttons a {
+        padding: 2ch;
+        background-color: cornflowerblue;
+        border-radius: 10px;
+        color: white;
+        margin: 0 1ch;
+    }
+
 
     @media screen and (max-width: 500px) {
         #left {

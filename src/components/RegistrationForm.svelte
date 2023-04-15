@@ -7,11 +7,13 @@
     let backgroundColor;
     let textColor;
     let formFieldsColor;
+    let mainBackgroundColor;
 
     $: {
         backgroundColor = $state ? '#36393F' : 'whitesmoke';
         formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'white';
         textColor = $state ? 'whitesmoke' : 'black';
+        mainBackgroundColor = $state ? '#292B2F' : 'white';
     }
 
 </script>
@@ -20,7 +22,7 @@
 
     <div class="welcome-page">
         <div class="welcome-text">
-            <h2>You're making a great choice!</h2>
+            <h2>Take charge of your fitness, the smart way</h2>
         </div>
         <img src="/images/daily-meditating-woman.png" alt="meditation">
     </div>
@@ -35,24 +37,24 @@
             <div class="form-field">
                 <i class="fa-regular fa-envelope"></i>
                 <input type="text" placeholder="email address" 
-                style:background-color={formFieldsColor}
-                style:color={textColor}
+                    style:background-color={formFieldsColor}
+                    style:color={textColor}
                 >
             </div>
 
             <div class="form-field">
                 <i class="fa-solid fa-user-pen"></i>
                 <input type="text" placeholder="username" 
-                style:background-color={formFieldsColor}
-                style:color={textColor}
+                    style:background-color={formFieldsColor}
+                    style:color={textColor}
                 >
             </div>
 
             <div class="form-field">
                 <i class="fa-solid fa-key"></i>
                 <input type="text" placeholder="password" 
-                style:background-color={formFieldsColor}
-                style:color={textColor}
+                    style:background-color={formFieldsColor}
+                    style:color={textColor}
                 >
             </div>
 
@@ -71,6 +73,7 @@
 
     </div>
 
+
 </div>
 
 <style>
@@ -78,9 +81,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 100vh;
-        /* gap: 2ch; */
+        min-height: 100vh;
+        gap: 20px;
     }
 
     .welcome-page {
@@ -94,17 +96,18 @@
         font-family: 'Rubik';
         color: lightgrey;
         position: relative;
-        /* border-radius: 15px; */
+        border-radius: 15px;
     }
 
     .welcome-text {
         position: absolute;
         top: 0;
         text-align: center;
+        padding: 1ch;
     }
 
     .registration-form {
-        /* border-radius: 15px; */
+        border-radius: 15px;
         /* padding: 5ch; */
         transition: 500ms;
         width: 35vw;

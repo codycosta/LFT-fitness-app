@@ -19,7 +19,7 @@
 
 <div class="wrapper">
     <div class="form-icon">
-        <img src="/gifs/urban-842.gif" alt="placeholder">
+        <img src="/images/daily-remote-workflow.png" alt="placeholder">
     </div>
     <div class="contact-form" style="background-color: {formBackdropColor}; box-shadow: {boxShadow};">
         <div class="title">
