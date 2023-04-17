@@ -194,4 +194,54 @@
         outline: none;
         transition: 500ms;
     }
+
+    @media screen and (max-width: 500px) {
+        .welcome-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 10vh;
+            width: 80vw;
+            padding: 2ch 0;
+        }
+
+        img {
+            display: none;
+        }
+
+        .welcome-text {
+            top: 0;
+            font-size: 1.5rem;
+            transform: rotate(0deg);
+        }
+
+        .registration-form {
+            width: 80vw;
+            height: 60vh;
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .wrapper {
+            flex-direction: column;
+        }
+
+        .submit-form {
+            height: 20vh;
+        }
+
+        .submit-form button {
+            font-size: 1rem;
+        }
+
+        .form-field {
+            gap: 2ch;
+        }
+
+        .form-field input {
+            width: 70%;
+        }
+    }
 </style>

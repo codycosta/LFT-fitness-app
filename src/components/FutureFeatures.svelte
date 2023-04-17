@@ -69,7 +69,8 @@
         box-shadow: 0px 30px 30px lightgray;
         border-radius: 10px;
         width: clamp(250px, 10vw, 600px);
-        aspect-ratio: 1;
+        height: 200px;
+        /* aspect-ratio: 1; */
         padding: 3ch;
         text-align: center;
         font-family: 'Rubik';
@@ -81,13 +82,13 @@
     }
 
     .description {
-        display: none;
+        transition: 500ms ease-in;
+        transition-delay: 400ms;
+        color: transparent;
     }
 
     .content-card:hover {
         width: 40vw;
-        aspect-ratio: 3;
-        /* text-align: left; */
         display: flex;
         gap: 3ch;
     }
@@ -96,6 +97,7 @@
         display: block;
         border-left: solid lightgray 1px;
         padding-left: 2ch;
+        color: darkgrey;
     }
 
     @media screen and (max-width: 500px) {
@@ -107,7 +109,7 @@
 
         .content-card:hover {
             width: 250px;
-            aspect-ratio: 1/2;
+            height: 500px;
             display: block;
             text-align: center;
         }
