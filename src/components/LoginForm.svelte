@@ -1,4 +1,4 @@
-<!-- registration form for registration page -->
+<!-- sign in form for login page -->
 
 <script>
 
@@ -22,16 +22,16 @@
 
     <div class="welcome-page">
         <div class="welcome-text">
-            <h2>Take charge of your fitness</h2>
+            <h2>Continue where you left off</h2>
         </div>
-        <img src="/images/daily-meditating-woman.png" alt="meditation">
+        <img src="/images/joy-young-woman-doing-sports.png" alt="meditation">
     </div>
 
     <div class="registration-form" 
         style:background-color={backgroundColor}>
 
         <div class="title">
-            <p>Get started with L F T</p>
+            <p>Welcome Back!</p>
         </div>
 
         <div class="form-body">
@@ -44,24 +44,8 @@
             </div>
 
             <div class="form-field">
-                <i class="fa-solid fa-user-pen"></i>
-                <input type="text" placeholder="username" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
-            </div>
-
-            <div class="form-field">
                 <i class="fa-solid fa-key"></i>
                 <input type="text" placeholder="password" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
-            </div>
-
-            <div class="form-field">
-                <i class="fa-solid fa-unlock-keyhole"></i>
-                <input type="text" placeholder="confirm password" 
                     style:background-color={formFieldsColor}
                     style:color={textColor}
                 >
@@ -69,15 +53,32 @@
         </div>
 
         <div class="submit-form">
-            <button>Beam me up, Scotty!</button>
+            <button>Put me in, Coach!</button>
         </div>
         
-        <!-- <div class="socials">
-            <p>social links here</p>
-        </div> -->
+        <div class="socials">
+            <p>Placeholder for future sign in option:</p>
+            <div class="sign-in-options">
+
+                <button
+                    style:color=red
+                    style:background-color={formFieldsColor}
+                >
+                    <i class="fa-brands fa-google"></i>
+
+                </button>
+
+                <button
+                    style:color=cornflowerblue
+                    style:background-color={formFieldsColor}
+                >
+                    <i class="fa-brands fa-facebook"></i>
+
+                </button>
+            </div>
+        </div>
 
     </div>
-
 
 </div>
 
@@ -91,7 +92,7 @@
     }
 
     .welcome-page {
-        background: url("/images/unsplash-vector-background.jpg");
+        background: url("/images/unsplash-vector-bg2.jpg");
         background-size: cover;
         width: 50vw;
         height: 80vh;
@@ -99,7 +100,7 @@
         place-items: center;
         font-size: 2rem;
         font-family: 'Rubik';
-        color: whitesmoke;
+        color: white;
         position: relative;
         border-radius: 15px;
     }
@@ -173,5 +174,24 @@
     .submit-form button:hover {
         background-color: lightseagreen;
         transform: scale(1.05);
+    }
+
+    .socials {
+        text-align: center;
+    }
+
+    .sign-in-options {
+        display: flex;
+        justify-content: center;
+        gap: 3ch;
+    }
+
+    .sign-in-options button {
+        font-size: 1.2rem;
+        padding: 1ch;
+        border-radius: 5px;
+        border: hidden;
+        outline: none;
+        transition: 500ms;
     }
 </style>

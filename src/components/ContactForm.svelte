@@ -1,6 +1,7 @@
 <!-- contact form at end of landing page -->
 
 <script>
+
     import { state } from "../stores/dark-mode-state";
 
     let formBackdropColor;
@@ -56,6 +57,7 @@
         border-radius: 10px;
         width: 40%;
         /* box-shadow: 10px 20px 30px lightgray; */
+        transition: 500ms;
     }
 
     .title {
@@ -85,6 +87,7 @@
         border: hidden;
         background-color: white;
         border-radius: 5px;
+        transition: 500ms;
     }
     
     .message {
@@ -92,7 +95,7 @@
         background-color: white;
         margin-top: 2ch;
         border-radius: 5px;
-        
+        transition: 500ms;
     }
 
     .message textarea {
@@ -101,6 +104,7 @@
         border: hidden;
         height: auto;
         font-family: 'Rubik';
+        transition: 500ms;
     }
 
     .submit-form {
@@ -110,6 +114,7 @@
         border-radius: 5px;
         display: flex;
         justify-content: space-around;
+        transition: 500ms;
     }
 
     .submit-form button {
