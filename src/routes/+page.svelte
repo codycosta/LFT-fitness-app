@@ -43,7 +43,9 @@
     <div class="section-break">
         <p>working out can be <strong style:color={sectionBreakStrongWordColor}>challenging</strong>...</p>
         <p class="section-support-description">but getting into shape doesn't have to be</p>
-        <img src="/gifs/marginalia-downloading.gif" alt="weightlifting cartoon">
+        <video src="/gifs/marginalia-downloading.webm" autoplay loop>
+            <track kind="captions">
+        </video>
     </div>
 
     <ExperimentalProductIntro />
@@ -94,10 +96,6 @@
 
     <ContactForm />
 
-    <!-- <div class="section-break">
-        <p>__</p>
-    </div> -->
-
 </main>
 
 
@@ -131,8 +129,9 @@
         font-size: 1.5rem;
     }
 
-    .section-break img {
+    .section-break video {
         width: 15vw;
+        border-radius: 10px;
     }
 
     @media screen and (max-width: 500px) {
@@ -145,7 +144,7 @@
             font-size: 0.7rem;
         }
 
-        .section-break img {
+        .section-break video {
             width: 30vw;
         }
     }

@@ -16,9 +16,7 @@
     <div id="left" class="panel" style="width: {panel_width}%">
         <div class="text">
             <h1><span>L F T</span></h1>
-            <!-- <p>your premium</p> -->
             <p>your one stop <span id="exercise">exercise</span> tracker</p>
-            <!-- <p>completely free</p> -->
             <div class="buttons">
                 <a href="/register"><i class="fa-solid fa-user-plus"></i></a>
                 <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
@@ -28,9 +26,7 @@
     <div id="right" class="panel">
         <div class="text">
             <h1><span>L F T</span></h1>
-            <!-- <p>your premium</p> -->
             <p>your one stop <span id="nutrition">nutrition</span> tracker</p>
-            <!-- <p>completely free</p> -->
             <div class="buttons">
                 <a href="/register"><i class="fa-solid fa-user-plus"></i></a>
                 <a href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
@@ -60,14 +56,12 @@
 
     #left {
         z-index: 1;
-        /* background: url("/images/deadlift-lft.jpg"); */
-        background: url("/images/workout-dark-unsplash.jpg");
-        /* filter: grayscale(80%); */
+        background: url("/images/workout-dark-unsplash.webp");
         background-size: 100vw, auto;
     }
 
     #right {
-        background: url("/images/coffee-2.jpg");
+        background: url("/images/coffee-2.webp");
         background-size: 100vw, auto;
     }
 
@@ -77,12 +71,7 @@
         margin: 0 15vw;
         font-size: 2rem;
         font-family: 'Rubik';
-        /* filter: grayscale(0%); */
     }
-
-    /* .welcome {
-        font-size: 1.5rem;
-    } */
 
     .text h1 > span {
         font-family: monospace;
@@ -92,26 +81,11 @@
 
     #exercise {
         color: goldenrod;
-        /* font-size: 4rem; */
     }
 
     #nutrition {
         color: lightskyblue;
-        /* font-size: 4rem; */
     }
-
-    /* @media screen and (max-width: 850px) {
-        #left {
-            background: url("/images/unsplash-boxing.jpg");
-            background-size: 100vw, auto;
-            background-repeat: no-repeat;
-        }
-        #right {
-            background: url("/images/darktheme-LFT.jpg");
-            background-size: 100vw, auto;
-            background-repeat: no-repeat;
-        }
-    } */
 
     .buttons {
         outline: none;

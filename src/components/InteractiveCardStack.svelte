@@ -89,7 +89,7 @@
 
     #card-2 {
         transform: translate(-1vw, 0vw) rotate(-1deg);
-        background: url("/images/unsplash-dips.jpg");
+        background: url("/images/unsplash-dips.webp");
         background-size: cover;
     }
 
@@ -101,7 +101,7 @@
 
     #card-4 {
         transform: translate(5vw, 0.5vw) rotate(2deg);
-        background: url("/images/unsplash-stretch.jpg");
+        background: url("/images/unsplash-stretch.webp");
         background-size: cover;
     }
 

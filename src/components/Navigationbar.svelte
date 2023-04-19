@@ -16,7 +16,8 @@
     <a href="/login" class="right"><i class="fa-solid fa-right-to-bracket"></i></a>
     <a href="/">L F T <span>(pre-alpha)</span></a>
 
-    <ToggleSwitch/>
+    <a href="/dashboard"><i class="fa-solid fa-house-user"></i></a>
+    <ToggleSwitch />
     
 </nav>
 
@@ -35,7 +36,7 @@
     }
 
     .navigator-bar a {
-        padding: 0px 30px;
+        padding: 0px 20px;
         text-decoration: none;
         color: darkgray;
         transition: 300ms;

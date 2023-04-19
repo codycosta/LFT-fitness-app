@@ -4,7 +4,9 @@
     <div class="message">
         <p>nothing to see here yet :(</p>
     </div>
-    <img src="/gifs/keyboard-cat-gif.gif" alt="keyboard cat">
+    <video src="/gifs/keyboard-cat-gif.webm" autoplay loop>
+        <track kind="captions">
+    </video>
 </div>
 
 <style>
@@ -19,9 +21,9 @@
         font-family: 'Rubik';
     }
 
-    img {
+    video {
         border-radius: 10px;
-        width: 50vw;
+        width: 40vw;
     }
 
     @media screen and (max-width: 500px) {

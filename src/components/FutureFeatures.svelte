@@ -82,8 +82,6 @@
     }
 
     .description {
-        transition: 500ms ease-in;
-        transition-delay: 400ms;
         color: transparent;
     }
 
@@ -98,6 +96,7 @@
         border-left: solid lightgray 1px;
         padding-left: 2ch;
         color: darkgrey;
+        transition: color 500ms 400ms ease-in;
     }
 
     @media screen and (max-width: 500px) {

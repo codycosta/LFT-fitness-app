@@ -28,7 +28,9 @@
         <div class="welcome-text">
             <h2>Continue where you left off</h2>
         </div>
-        <img src="/gifs/meditation-gif.gif" alt="meditation">
+        <video src="/gifs/meditation-gif.webm" autoplay loop>
+            <track kind="captions">
+        </video>
     </div>
 
     <div class="registration-form" 
@@ -111,8 +113,11 @@
         /* transform: rotate(-45deg); */
     }
 
-    .welcome-page img {
+    .welcome-page video {
         width: 50%;
+        border-radius: 10px;
+        border: hidden;
+        outline: none;
     }
 
     .registration-form {
@@ -207,7 +212,7 @@
             padding: 2ch 0;
         }
 
-        img {
+        video {
             display: none;
         }
 

@@ -28,7 +28,9 @@
         <div class="welcome-text">
             <h2>Take charge of your fitness</h2>
         </div>
-        <img src="/gifs/marginalia-downloading.gif" alt="meditation">
+        <video src="/gifs/marginalia-downloading.webm" autoplay loop>
+            <track kind="captions">
+        </video>
     </div>
 
     <div class="registration-form" 
@@ -106,8 +108,11 @@
         /* transform: rotate(-45deg); */
     }
 
-    .welcome-page img {
+    .welcome-page video {
         width: 50%;
+        border-radius: 10px;
+        border: hidden;
+        outline: none;
     }
 
     .registration-form {
@@ -183,7 +188,7 @@
             padding: 2ch 0;
         }
 
-        img {
+        video {
             display: none;
         }
 
