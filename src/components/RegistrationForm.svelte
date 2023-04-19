@@ -9,11 +9,15 @@
     let formFieldsColor;
     let mainBackgroundColor;
 
+    let imgSrc;
+
     $: {
         backgroundColor = $state ? '#36393F' : 'whitesmoke';
-        formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'white';
+        formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'whitesmoke';
         textColor = $state ? 'whitesmoke' : 'black';
         mainBackgroundColor = $state ? '#292B2F' : 'white';
+
+        imgSrc = $state ? "url('/images/unsplash-vector-background.jpg')" : "url('/images/unsplash-vector-bg2.jpg')";
     }
 
 </script>
@@ -24,11 +28,12 @@
         <div class="welcome-text">
             <h2>Take charge of your fitness</h2>
         </div>
-        <img src="/images/daily-meditating-woman.png" alt="meditation">
+        <img src="/gifs/marginalia-downloading.gif" alt="meditation">
     </div>
 
     <div class="registration-form" 
-        style:background-color={backgroundColor}>
+        style:background-image={imgSrc}
+        style:background-size=cover >
 
         <div class="title">
             <p>Get started with L F T!</p>
@@ -37,34 +42,22 @@
         <div class="form-body">
             <div class="form-field">
                 <i class="fa-regular fa-envelope"></i>
-                <input type="text" placeholder="email address" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
+                <input type="text" placeholder="email address">
             </div>
 
             <div class="form-field">
                 <i class="fa-solid fa-user-pen"></i>
-                <input type="text" placeholder="username" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
+                <input type="text" placeholder="username">
             </div>
 
             <div class="form-field">
                 <i class="fa-solid fa-key"></i>
-                <input type="text" placeholder="password" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
+                <input type="text" placeholder="password">
             </div>
 
             <div class="form-field">
                 <i class="fa-solid fa-unlock-keyhole"></i>
-                <input type="text" placeholder="confirm password" 
-                    style:background-color={formFieldsColor}
-                    style:color={textColor}
-                >
+                <input type="text" placeholder="confirm password">
             </div>
         </div>
 
@@ -91,7 +84,7 @@
     }
 
     .welcome-page {
-        background: url("/images/unsplash-vector-background.jpg");
+        /* background: url("/images/unsplash-vector-background.jpg"); */
         background-size: cover;
         width: 50vw;
         height: 80vh;
@@ -99,17 +92,22 @@
         place-items: center;
         font-size: 2rem;
         font-family: 'Rubik';
-        color: whitesmoke;
+        color: darkgrey;
         position: relative;
         border-radius: 15px;
+        transition: 500ms;
     }
 
     .welcome-text {
         position: absolute;
-        top: 40%;
+        top: 0;
         text-align: center;
         padding: 1ch;
-        transform: rotate(-45deg);
+        /* transform: rotate(-45deg); */
+    }
+
+    .welcome-page img {
+        width: 50%;
     }
 
     .registration-form {
@@ -118,7 +116,7 @@
         transition: 500ms;
         width: 35vw;
         height: 80vh;
-        color: darkgrey;
+        color: white;
     }
 
     .title {

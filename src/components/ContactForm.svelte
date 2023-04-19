@@ -20,7 +20,7 @@
 
 <div class="wrapper">
     <div class="form-icon">
-        <img src="/images/daily-remote-workflow.png" alt="placeholder">
+        <img src="/images/unsplash-contact-art.png" alt="placeholder">
     </div>
     <div class="contact-form" style="background-color: {formBackdropColor}; box-shadow: {boxShadow};">
         <div class="title">
