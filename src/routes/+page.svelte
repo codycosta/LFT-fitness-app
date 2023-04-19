@@ -94,9 +94,9 @@
 
     <ContactForm />
 
-    <div class="section-break">
+    <!-- <div class="section-break">
         <p>__</p>
-    </div>
+    </div> -->
 
 </main>
 
