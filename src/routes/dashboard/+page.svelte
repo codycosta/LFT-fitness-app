@@ -17,7 +17,7 @@
     style:color={mainTextColor}
 >
     <UserIntroduction />
-    
+
 </main>
 
 <style>
