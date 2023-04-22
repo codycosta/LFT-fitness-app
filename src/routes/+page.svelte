@@ -24,7 +24,7 @@
     // react to dark mode store changes
 
     $: {
-        mainBackgroundColor = $state ? '#292B2F' : 'white';
+        mainBackgroundColor = $state ? '#292B2F' : 'whitesmoke';
         mainTextColor = $state ? 'lightgrey' : 'black';
         sectionBreakStrongWordColor = $state ? '#34EBC3' : 'tomato'
     }
@@ -127,6 +127,7 @@
 
     .section-support-description {
         font-size: 1.5rem;
+        color: darkgrey;
     }
 
     .section-break video {

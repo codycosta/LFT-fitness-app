@@ -11,7 +11,7 @@
 
     $: {
         formBackdropColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '0px 30px 30px lightgray';
+        boxShadow = $state ? 'none' : '10px 10px 20px rgb(230, 230, 230), -10px -10px 10px rgb(250, 250, 250)';
         formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'white';
         textColor = $state ? 'whitesmoke' : 'black';
     }
@@ -49,6 +49,7 @@
         display: flex;
         justify-content: center;
         gap: 5ch;
+        padding: 50px 0;
     }
     
     .contact-form {
@@ -56,7 +57,6 @@
         padding: 3ch;
         border-radius: 10px;
         width: 40%;
-        /* box-shadow: 10px 20px 30px lightgray; */
         transition: 500ms;
     }
 
@@ -64,7 +64,6 @@
         font-family: 'Rubik';
         font-size: 2rem;
         color: darkgray;
-        /* background-color: white; */
         padding: 1ch;
         border-radius: 5px;
     }
@@ -73,8 +72,6 @@
         display: flex;
         justify-content: center;
         gap: 5ch;
-        /* padding: 2ch; */
-        /* background-color: white; */
         margin-top: 2ch;
         border-radius: 5px;
     }
@@ -82,7 +79,6 @@
     .contact-information input {
         padding: 2.5ch;
         width: 50%;
-        /* height: 2rem; */
         outline: none;
         border: hidden;
         background-color: white;

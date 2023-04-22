@@ -7,7 +7,7 @@
 
     let navBackgroundColor;
 
-    $: navBackgroundColor = $state ? '#202225' : 'whitesmoke';
+    $: navBackgroundColor = $state ? '#202225' : 'white';
 
 </script>
 
@@ -27,7 +27,6 @@
         width: 100%;
         font-family: monospace;
         font-size: 1.5rem;
-        /* background-color: rgba(240, 248, 255, 0.85); */
         padding: 10px;
         top: 0;
         left: 0;

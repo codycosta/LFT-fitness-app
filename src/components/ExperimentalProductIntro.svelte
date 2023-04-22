@@ -8,7 +8,7 @@
 
     $: {
         cardColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '0px 30px 30px lightgray';
+        boxShadow = $state ? 'none' : '10px 10px 20px rgb(230, 230, 230), -10px -10px 10px rgb(250, 250, 250)';
     }
 </script>
 
@@ -59,7 +59,7 @@
 
 <style>
     .content-card-wrapper {
-        padding: 3ch;
+        padding: 50px 0;
         display: flex;
         justify-content: center;
         gap: 6ch;
@@ -84,10 +84,9 @@
         transition: 500ms;
     }
 
-    /* .content-card h5 {
-        font-size: 1.6rem;
-        color: tomato;
-    } */
+    .enjoy-fitness-phrase {
+        color: darkgrey;
+    }
 
     @media screen and (max-width: 500px) {
         .content-card-wrapper {
