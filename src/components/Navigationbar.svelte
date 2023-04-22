@@ -43,7 +43,6 @@
     }
 
     .navigator-bar a:hover {
-        transform: scale(1.1);
         color: cornflowerblue;
     }
 
