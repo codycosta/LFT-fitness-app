@@ -8,7 +8,7 @@
 
     $: {
         cardColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '10px 10px 20px rgb(230, 230, 230), -10px -10px 10px rgb(250, 250, 250)';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
 </script>
 
@@ -29,6 +29,23 @@
             <p>
                 Integrated right into your user dashboard and interface, get a glimpse of
                 both your activity and macros
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="content-card-wrapper">
+    <div class="content-card"
+        style:background-color={cardColor}
+        style:box-shadow={boxShadow}
+    >
+        <div>
+            <h5>Mobile Native Platform <i class="fa-brands fa-apple" style="color: steelblue"></i></h5>
+        </div>
+
+        <div class="description">
+            <p>
+                The browser is only the beginning. Release on apple and android is in the works, date TBD
             </p>
         </div>
     </div>

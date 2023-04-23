@@ -39,8 +39,6 @@
         position: relative;
         display: flex;
         justify-content: center;
-        /* height: 25vw; */
-        /* background-color: aliceblue; */
         width: 25%;
         margin: 0 37.5%;
     }
@@ -52,8 +50,6 @@
         width: clamp(150px, 15vw, 400px);
         aspect-ratio: 4/5;
         height: auto;
-        box-shadow: 0px 20px 30px lightgray;
-        /* text-align: center; */
         color: darkslategrey;
         font-size: 1.4rem;
         font-family: 'Rubik';
@@ -194,7 +190,6 @@
 
         .card-stack:hover #hidden {
             width: 200px;
-            /* height: clamp(190px, 18.75vw, 500px); */
             height: 120vh;
         }
     }

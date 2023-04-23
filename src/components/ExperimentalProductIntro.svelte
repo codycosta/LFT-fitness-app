@@ -8,7 +8,7 @@
 
     $: {
         cardColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '10px 10px 20px rgb(230, 230, 230), -10px -10px 10px rgb(250, 250, 250)';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
 </script>
 

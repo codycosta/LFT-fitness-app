@@ -8,6 +8,7 @@
     let textColor;
     let formFieldsColor;
     let mainBackgroundColor;
+    let boxShadow;
 
     let imgSrc;
 
@@ -16,6 +17,7 @@
         formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'whitesmoke';
         textColor = $state ? 'whitesmoke' : 'black';
         mainBackgroundColor = $state ? '#292B2F' : 'white';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
 
         imgSrc = $state ? "url('/images/unsplash-vector-background.jpg')" : "url('/images/unsplash-vector-bg2.jpg')";
     }
@@ -24,7 +26,8 @@
 
 <div class="wrapper">
 
-    <div class="welcome-page">
+    <div class="welcome-page"
+        style:box-shadow={boxShadow}>
         <div class="welcome-text">
             <h2>Continue where you left off</h2>
         </div>
@@ -35,7 +38,8 @@
 
     <div class="registration-form" 
         style:background-image={imgSrc}
-        style:background-size=cover >
+        style:background-size=cover 
+        style:box-shadow={boxShadow}>
 
         <div class="title">
             <p>Welcome Back!</p>
@@ -87,7 +91,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        gap: 20px;
+        gap: 50px;
     }
 
     .welcome-page {

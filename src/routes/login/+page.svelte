@@ -4,7 +4,7 @@
 
     let mainBackgroundColor;
 
-    $: mainBackgroundColor = $state ? '#292B2F' : 'white';
+    $: mainBackgroundColor = $state ? '#292B2F' : 'whitesmoke';
 
 </script>
 
