@@ -52,11 +52,10 @@
     
     <div class="section-break">
         <p>
-            <a href="/register">sign up</a> 
-            and get access to these features ( and <strong style:color={sectionBreakStrongWordColor}>more</strong> )
+            View LFT at its  <strong style:color={sectionBreakStrongWordColor}>core</strong>
         </p>
         <p class="section-support-description">
-            this is the core of LFT in its pre-alpha stage, with much more on the way!
+            this is the foundation of LFT in its pre-alpha stage, with much more on the way!
         </p>
     </div>
 

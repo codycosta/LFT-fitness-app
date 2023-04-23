@@ -20,21 +20,21 @@
 <div class="daily-status">
     <div class="content-region" style:background-color={cardColor}>
         <p class="heading">Yesterday's metrics</p>
-        <div class="neumorphic-card" style:box-shadow={boxShadow}>
-            <p>bar graph here with calories burned, workout length, total volume</p>
+        <div class="card" style:box-shadow={boxShadow}>
+            <BarGraph />
         </div>
-        <div class="neumorphic-card" style:box-shadow={boxShadow}>
-            <p>more content here</p>
+        <div class="card" style:box-shadow={boxShadow}>
+            <p>quick recap</p>
         </div>
     </div>
 
     <div class="content-region" style:background-color={cardColor}>
         <p class="heading">Today's metrics</p>
-        <div class="neumorphic-card" style:box-shadow={boxShadow}>
+        <div class="card" style:box-shadow={boxShadow}>
             <BarGraph />
         </div>
-        <div class="neumorphic-card" style:box-shadow={boxShadow}>
-            <p>more content here</p>
+        <div class="card" style:box-shadow={boxShadow}>
+            <p>today's plan</p>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
         padding-bottom: 20px;
     }
 
-    .neumorphic-card {
+    .card {
         padding: 15px;
         border-radius: 5px;
         margin: 30px 0;
