@@ -1,20 +1,30 @@
+<script>
+
+    // export props to resemble the graph heights
+
+    export let calories;
+    export let exercise;
+    export let streak;
+
+</script>
+
 <div class="graph-region">
     <table>
         <caption>Activity Goals</caption>
         <tbody>
             <tr id="calories">
                 <caption>calories</caption>
-                <td><div class="progress"></div></td>
+                <td><div class="progress" style:height={`${calories}%`}>{calories}%</div></td>
             </tr>
 
             <tr id="exercise">
                 <caption>exercise</caption>
-                <td><div class="progress"></div></td>
+                <td><div class="progress" style:height={`${exercise}%`}>{exercise}%</div></td>
             </tr>
 
-            <tr id="volume">
-                <caption>volume</caption>
-                <td><div class="progress"></div></td>
+            <tr id="streak">
+                <caption>streak</caption>
+                <td><div class="progress" style:height={`${streak}%`}>{streak}%</div></td>
             </tr>
         </tbody>
     </table>
@@ -57,6 +67,8 @@
         height: 40%;
         width: 100%;
         background-color: aqua;
+        text-align: center;
+        color: white;
     }
 
     #exercise .progress{
@@ -64,7 +76,7 @@
         height: 80%;
     }
 
-    #volume .progress {
+    #streak .progress {
         background-color: #34EBC3;
         height: 65%;
     }

@@ -75,7 +75,7 @@
     <NothingToSeeHere />
 
     <div class="section-break">
-        <p>What does the <strong style:color={sectionBreakStrongWordColor}>future</strong> hold?</p>
+        <p>What's <strong style:color={sectionBreakStrongWordColor}>next</strong>?</p>
         <p class="section-support-description">
             we belive in transparency and want to give our users a clear image of the roadmap
         </p>

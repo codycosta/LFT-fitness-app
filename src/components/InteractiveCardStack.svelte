@@ -1,33 +1,24 @@
 <!-- hoverable expanding card stack for interactivity -->
 
-<script>
-    import { state } from '../stores/dark-mode-state.js';
-
-    let boxShadow;
-
-    $: boxShadow = $state ? 'none' : '0px 30px 30px lightgray';
-
-</script>
-
 <div class="card-stack" >
     <div id="hidden" class="card"></div>
-    <div id="top-card" class="card stacked" style:box-shadow={boxShadow}>
+    <div id="top-card" class="card stacked">
         <p class="heading">Performance Metrics <i class="fa-solid fa-diagram-project"></i></p>
         <hr>
         <p>View your fitness progress as a function of time and track your goals</p>
     </div>
-    <div id="card-2" class="card stacked" style:box-shadow={boxShadow}>
+    <div id="card-2" class="card stacked">
         <p class="heading">Personal Records <i class="fa-solid fa-book"></i></p>
         
         <hr>
         <p>Records are automatically stored when you complete a routine</p>
     </div>
-    <div id="card-3" class="card stacked" style:box-shadow={boxShadow}>
+    <div id="card-3" class="card stacked">
         <p class="heading">Routine Templating <i class="fa-solid fa-pen-to-square"></i></p>
         <hr>
         <p>build an arsenal of workout routines with all of your favorite exercises</p>
     </div>
-    <div id="card-4" class="card stacked" style:box-shadow={boxShadow}>
+    <div id="card-4" class="card stacked">
         <p class="heading">Recovery Management <i class="fa-regular fa-clock"></i></p>
         <hr>
         <p>set a timer to allocate a rest period between sets</p>

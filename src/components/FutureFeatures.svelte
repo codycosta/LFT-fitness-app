@@ -23,10 +23,6 @@
         
         <div class="description">
             <p>
-                We want to provide you with a daily diary to track
-                the foods and beverages you consume
-            </p>
-            <p>
                 Integrated right into your user dashboard and interface, get a glimpse of
                 both your activity and macros
             </p>

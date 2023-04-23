@@ -2,12 +2,10 @@
     import { state } from "../../stores/dark-mode-state";
 	import BarGraph from "./BarGraph.svelte";
 
-    let backgroundColor;
     let boxShadow;
     let cardColor;
 
     $: {
-        backgroundColor = $state ? '#292B2F' : 'whitesmoke';
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(230, 230, 230), -10px -10px 0px white';
         cardColor = $state ? '#36393F' : 'whitesmoke';
     }
@@ -19,22 +17,37 @@
 
 <div class="daily-status">
     <div class="content-region" style:background-color={cardColor}>
-        <p class="heading">Yesterday's metrics</p>
+        <p class="heading">Today's metrics</p>
         <div class="card" style:box-shadow={boxShadow}>
-            <BarGraph />
+
+            <BarGraph calories={40} exercise={20} streak={30}/>
+
         </div>
         <div class="card" style:box-shadow={boxShadow}>
-            <p>quick recap</p>
+            <p>today's plan</p>
+            <ul>
+                <li>any scheduled workouts?</li>
+                <li>any NEAT? (walking, swimming, etc)</li>
+                <li>give the user suggestions to reach their goals</li>
+            </ul>
         </div>
     </div>
 
     <div class="content-region" style:background-color={cardColor}>
-        <p class="heading">Today's metrics</p>
+        <p class="heading">Yesterday's metrics</p>
         <div class="card" style:box-shadow={boxShadow}>
-            <BarGraph />
+
+            <BarGraph calories={90} exercise={76} streak={50}/>
+
         </div>
         <div class="card" style:box-shadow={boxShadow}>
-            <p>today's plan</p>
+            <p>quick recap</p>
+            <ul>
+                <li>routine done + length</li>
+                <li>total volume lifted last workout</li>
+                <li>activity relative to goal</li>
+                <li>current workout streak</li>
+            </ul>
         </div>
     </div>
 </div>
@@ -43,7 +56,7 @@
     .user-intro {
         display: flex;
         justify-content: center;
-        padding: 100px 0;
+        padding-top: 100px;
         font-family: 'Rubik';
         font-size: 2rem;
     }
@@ -52,12 +65,13 @@
         display: flex;
         justify-content: center;
         gap: 50px;
+        padding: 50px 0;
     }
 
     .content-region {
         background-color: whitesmoke;
         color: darkgrey;
-        padding: 35px;
+        padding: 30px;
         font-family: 'Rubik';
         border-radius: 10px;
     }
@@ -74,7 +88,7 @@
     .card {
         padding: 15px;
         border-radius: 5px;
-        margin: 30px 0;
+        margin: 50px 0;
     }
 
     @media screen and (max-width: 500px) {
