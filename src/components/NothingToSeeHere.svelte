@@ -30,5 +30,9 @@
         .message {
             font-size: 1rem;
         }
+
+        video {
+            width: 300px;
+        }
     }
 </style>

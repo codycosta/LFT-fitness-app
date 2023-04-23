@@ -133,6 +133,7 @@
         .content-card:hover .description {
             border-left: hidden;
             border-top: solid lightgray 1px;
+            padding-left: 0px;
         }
 
     }

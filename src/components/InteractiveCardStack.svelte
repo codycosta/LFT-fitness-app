@@ -169,22 +169,22 @@
 
 
         .card-stack:hover #top-card:hover {
-            transform: translate(0vw, 0vh) scale(1.05);
+            transform: translate(0vw, 0vh);
             z-index: 2;
         }
 
         .card-stack:hover #card-2:hover {
-            transform: translate(0vw, 35vh) scale(1.05);
+            transform: translate(0vw, 35vh);
             z-index: 2;
         }
 
         .card-stack:hover #card-3:hover {
-            transform: translate(0vw, 70vh) scale(1.05);
+            transform: translate(0vw, 70vh);
             z-index: 2;
         }
 
         .card-stack:hover #card-4:hover {
-            transform: translate(0vw, 105vh) scale(1.05);
+            transform: translate(0vw, 105vh);
             z-index: 2;
         }
 
