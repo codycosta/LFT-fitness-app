@@ -1,5 +1,5 @@
 <script>
-	import LoginForm from "../../components/LoginForm.svelte";
+	import LoginForm from "./LoginForm.svelte";
     import { state } from "../../stores/dark-mode-state";
 
     let mainBackgroundColor;

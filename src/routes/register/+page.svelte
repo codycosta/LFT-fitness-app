@@ -1,5 +1,5 @@
 <script>
-    import RegistrationForm from "../../components/RegistrationForm.svelte";
+    import RegistrationForm from "./RegistrationForm.svelte";
     import { state } from "../../stores/dark-mode-state";
 
     let mainBackgroundColor;

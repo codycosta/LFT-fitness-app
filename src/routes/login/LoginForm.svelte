@@ -2,7 +2,7 @@
 
 <script>
 
-    import { state } from "../stores/dark-mode-state";
+    import { state } from "../../stores/dark-mode-state";
 
     let backgroundColor;
     let textColor;
