@@ -26,7 +26,7 @@
     $: {
         mainBackgroundColor = $state ? '#292B2F' : 'whitesmoke';
         mainTextColor = $state ? 'lightgrey' : 'black';
-        sectionBreakStrongWordColor = $state ? '#34EBC3' : 'tomato'
+        sectionBreakStrongWordColor = $state ? '#34EBC3' : 'tomato';
     }
 
 </script>

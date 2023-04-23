@@ -6,19 +6,15 @@
 
     let backgroundColor;
     let textColor;
-    let formFieldsColor;
-    let mainBackgroundColor;
     let boxShadow;
-
+    let emphasisColor
     let imgSrc;
 
     $: {
         backgroundColor = $state ? '#36393F' : 'whitesmoke';
-        formFieldsColor = $state ? 'rgb(70, 70, 75)' : 'whitesmoke';
         textColor = $state ? 'whitesmoke' : 'black';
-        mainBackgroundColor = $state ? '#292B2F' : 'white';
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
-
+        emphasisColor = $state ? '#34EBC3' : 'tomato';
         imgSrc = $state ? "url('/images/unsplash-vector-background.jpg')" : "url('/images/unsplash-vector-bg2.jpg')";
     }
 
@@ -27,8 +23,9 @@
 <div class="wrapper">
 
     <div class="welcome-page"
-        style:box-shadow={boxShadow}>
-        <div class="welcome-text">
+        style:box-shadow={boxShadow}
+        style:background-color={backgroundColor}>
+        <div class="welcome-text" style:color={emphasisColor}>
             <h2>Continue where you left off</h2>
         </div>
         <video src="/gifs/meditation-gif.webm" autoplay loop>
@@ -95,14 +92,13 @@
     }
 
     .welcome-page {
-        /* background: url("/images/unsplash-vector-bg2.jpg"); */
         background-size: cover;
         width: 50vw;
         height: 80vh;
         display: grid;
         place-items: center;
         font-size: 2rem;
-        font-family: 'Rubik';
+        font-family: 'Nothing You Could Do';
         color: darkgrey;
         position: relative;
         border-radius: 15px;
@@ -114,7 +110,7 @@
         top: 0;
         text-align: center;
         padding: 1ch;
-        /* transform: rotate(-45deg); */
+        transition: 500ms;
     }
 
     .welcome-page video {
@@ -126,7 +122,6 @@
 
     .registration-form {
         border-radius: 15px;
-        /* padding: 5ch; */
         transition: 500ms;
         width: 35vw;
         height: 80vh;
@@ -134,7 +129,7 @@
     }
 
     .title {
-        font-family: 'Rubik';
+        font-family: 'Nothing You Could Do';
         text-align: center;
         font-size: 2rem;
         padding-top: 2ch;
@@ -164,8 +159,6 @@
     }
 
     .submit-form {
-        /* background-color: white; */
-        /* padding: 20px; */
         display: grid;
         place-items: center;
         height: 30vh;
@@ -180,6 +173,7 @@
         color: white;
         font-size: 1.4rem;
         transition: 250ms;
+        font-family: 'Nothing You Could Do';
     }
 
     .submit-form button:hover {

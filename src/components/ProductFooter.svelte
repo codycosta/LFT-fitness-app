@@ -2,12 +2,22 @@
 
 <script>
 
+    import { state } from "../stores/dark-mode-state";
+
     let svelteLogo = '/images/svelte-logo.png';
     let supabaseLogo = 'images/supabase-logo.png';
 
+    let backgroundColor;
+    let textColor;
+
+    $: {
+        backgroundColor = $state ? '#292B2F' : 'whitesmoke';
+        textColor = $state ? 'lightgrey' : 'black';
+    }
+
 </script>
 
-<footer>
+<footer style:background-color={backgroundColor} style:color={textColor}>
     <br>
     <!-- <hr> -->
     <br>
@@ -23,10 +33,6 @@
         <p>PRIVACY POLICY</p>
         <p>ABOUT</p>
         <p>CONTACT</p>
-        <!-- <div style="text-align: left;">
-            <p>We do not keep any personal data other than the required info for account creation and verification</p>
-            <p>Passwords are encrypted for your safety</p>
-        </div> -->
 
     </div>
     
@@ -35,7 +41,7 @@
 <style>
     footer {
         text-align: center;
-        background-color: whitesmoke;
+        transition: 500ms;
     }
 
     .organization-name {

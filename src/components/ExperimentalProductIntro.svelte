@@ -14,8 +14,7 @@
 
 <div class="content-card-wrapper">
     <div class="enjoy-fitness-phrase">
-        <hr>
-        <h5>Enjoy simplified fitness <i class="fa-solid fa-heart-pulse"></i></h5>
+        <p>Enjoy simplified fitness <i class="fa-solid fa-heart-pulse"></i></p>
         <hr>
     </div>
     
@@ -86,6 +85,8 @@
 
     .enjoy-fitness-phrase {
         color: darkgrey;
+        font-family: 'Nothing You Could Do';
+        font-size: 2rem;
     }
 
     @media screen and (max-width: 500px) {
@@ -97,6 +98,7 @@
 
         .enjoy-fitness-phrase {
             text-align: center;
+            font-size: 1.5rem;
         }
     }
 </style>
