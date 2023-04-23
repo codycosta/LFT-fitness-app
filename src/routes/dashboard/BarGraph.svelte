@@ -1,7 +1,6 @@
 <div class="graph-region">
     <table>
         <caption>Activity Goals</caption>
-        <hr>
         <tbody>
             <tr id="calories">
                 <caption>calories</caption>
@@ -37,6 +36,10 @@
         padding: 20px;
     }
 
+    tr caption {
+        padding-bottom: 1ch;
+    }
+
     td {
         height: 150px;
         width: 30px;
@@ -64,5 +67,15 @@
     #volume .progress {
         background-color: #34EBC3;
         height: 65%;
+    }
+
+    @media screen and (max-width: 500px) {
+        tbody {
+            gap: 0px;
+        }
+
+        tr caption {
+            font-size: 0.75rem;
+        }
     }
 </style>

@@ -76,4 +76,11 @@
         border-radius: 5px;
         margin: 30px 0;
     }
+
+    @media screen and (max-width: 500px) {
+        .daily-status {
+            flex-direction: column;
+            padding: 40px;
+        }
+    }
 </style>
