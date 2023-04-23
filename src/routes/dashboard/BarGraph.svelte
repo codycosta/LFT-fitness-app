@@ -66,7 +66,7 @@
         left: 0;
         height: 40%;
         width: 100%;
-        background-color: aqua;
+        background-color: skyblue;
         text-align: center;
         color: white;
     }

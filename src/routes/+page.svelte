@@ -114,11 +114,6 @@
         margin-bottom: 5vw;
     }
 
-    .section-break a {
-        /* text-decoration: none; */
-        color: cornflowerblue;
-    }
-
     .section-break strong {
         color: tomato;
         transition: 500ms;
