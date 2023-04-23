@@ -1,5 +1,6 @@
 <script>
     import { state } from "../../stores/dark-mode-state";
+	import BarGraph from "./BarGraph.svelte";
 
     let backgroundColor;
     let boxShadow;
@@ -7,7 +8,7 @@
 
     $: {
         backgroundColor = $state ? '#292B2F' : 'whitesmoke';
-        boxShadow = $state ? 'none' : '10px 10px 0px rgb(230, 230, 230), -10px -10px 0px white';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(230, 230, 230), -10px -10px 0px white';
         cardColor = $state ? '#36393F' : 'whitesmoke';
     }
 </script>
@@ -18,10 +19,9 @@
 
 <div class="daily-status">
     <div class="content-region" style:background-color={cardColor}>
-        <p>Yesterday's metrics</p>
-        <hr>
+        <p class="heading">Yesterday's metrics</p>
         <div class="neumorphic-card" style:box-shadow={boxShadow}>
-            <p>bar graph here</p>
+            <p>bar graph here with calories burned, workout length, total volume</p>
         </div>
         <div class="neumorphic-card" style:box-shadow={boxShadow}>
             <p>more content here</p>
@@ -29,10 +29,9 @@
     </div>
 
     <div class="content-region" style:background-color={cardColor}>
-        <p>Today's activity & goals</p>
-        <hr>
+        <p class="heading">Today's metrics</p>
         <div class="neumorphic-card" style:box-shadow={boxShadow}>
-            <p>bar graph here</p>
+            <BarGraph />
         </div>
         <div class="neumorphic-card" style:box-shadow={boxShadow}>
             <p>more content here</p>
@@ -65,6 +64,11 @@
 
     .content-region p {
         text-align: center;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
     }
 
     .neumorphic-card {

@@ -113,7 +113,6 @@
         font-family: 'Rubik';
         margin-top: 15vw;
         margin-bottom: 5vw;
-        /* background-color: aliceblue; */
     }
 
     .section-break a {
@@ -123,6 +122,7 @@
 
     .section-break strong {
         color: tomato;
+        transition: 500ms;
     }
 
     .section-support-description {
