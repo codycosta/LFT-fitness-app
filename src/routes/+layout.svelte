@@ -3,6 +3,9 @@
 <script>
 
     import NavigationBar from '../components/Navigationbar.svelte';
+    import { fade, fly } from 'svelte/transition';
+
+    export let data;
 
 </script>
 
@@ -14,4 +17,13 @@
 
 <NavigationBar/>
 
-<slot/>
+{#key data.pathname}
+
+    <div 
+        in:fly={{ x: 1000, duration: 1000, delay: 1000 }}
+        out:fly={{ x: -1000, duration: 1000 }}
+    >
+        <slot/>
+    </div>
+
+{/key}
