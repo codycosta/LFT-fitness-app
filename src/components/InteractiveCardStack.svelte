@@ -5,23 +5,23 @@
     <div id="top-card" class="card stacked">
         <p class="heading">Performance Metrics <i class="fa-solid fa-diagram-project"></i></p>
         <hr>
-        <p>View your fitness progress as a function of time and track your goals</p>
+        <p>View your progress and track your goals</p>
     </div>
     <div id="card-2" class="card stacked">
         <p class="heading">Personal Records <i class="fa-solid fa-book"></i></p>
         
         <hr>
-        <p>Records are automatically stored when you complete a routine</p>
+        <p>Complete workouts. View PR's</p>
     </div>
     <div id="card-3" class="card stacked">
         <p class="heading">Routine Templating <i class="fa-solid fa-pen-to-square"></i></p>
         <hr>
-        <p>build an arsenal of workout routines with all of your favorite exercises</p>
+        <p>build an arsenal of workout routines</p>
     </div>
     <div id="card-4" class="card stacked">
         <p class="heading">Recovery Management <i class="fa-regular fa-clock"></i></p>
         <hr>
-        <p>set a timer to allocate a rest period between sets</p>
+        <p>set a timer rest between sets</p>
     </div>
 </div>
 
@@ -38,7 +38,7 @@
         flex: 0 0 auto;
         border-radius: 8px;
         background-color: whitesmoke;
-        width: clamp(150px, 15vw, 400px);
+        width: clamp(140px, 12vw, 350px);
         aspect-ratio: 4/5;
         height: auto;
         color: darkslategrey;
@@ -93,7 +93,7 @@
 
     .card-stack:hover #hidden {
         width: 90vw;
-        height: clamp(190px, 18.75vw, 500px);
+        height: clamp(175px, 15vw, 437.5px);
     }
 
     .card-stack:hover #top-card {
@@ -123,24 +123,24 @@
         }
 
         .card-stack:hover #top-card {
-            transform: translate(0vw, 0vh) rotate(0deg);
+            transform: translate(-23vw, 0vh) rotate(0deg);
         }
 
         .card-stack:hover #card-2 {
-            transform: translate(0vw, 35vh) rotate(0deg);
+            transform: translate(23vw, 0vh) rotate(0deg);
         }
 
         .card-stack:hover #card-3 {
-            transform: translate(0vw, 70vh) rotate(0deg);
+            transform: translate(-23vw, 28vh) rotate(0deg);
         }
 
         .card-stack:hover #card-4 {
-            transform: translate(0vw, 105vh) rotate(0deg);
+            transform: translate(23vw, 28vh) rotate(0deg);
         }
 
         .card-stack:hover #hidden {
             width: 200px;
-            height: 120vh;
+            height: 50vh;
         }
     }
 </style>

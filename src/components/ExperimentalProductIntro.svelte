@@ -9,7 +9,7 @@
 
     $: {
         cardColor = $state ? '#36393F' : 'whitesmoke';
-        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px lightgrey, -10px -10px 0px rgb(250, 250, 250)';
     }
 
     // animate on component visibility
@@ -90,7 +90,7 @@
     .content-card-translated {
         box-shadow: 0px 30px 30px lightgray;
         border-radius: 10px;
-        width: clamp(250px, 10vw, 600px);
+        width: clamp(200px, 10vw, 600px);
         aspect-ratio: 1;
         padding: 3ch;
         text-align: center;

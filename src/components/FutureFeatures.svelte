@@ -17,12 +17,19 @@
     let cardWidth = 'clamp(250px, 10vw, 600px)'
     let displayType
     let active = false
+    let cardHeight = '200px'
     
     const animate = () => {
-        if (ypos > 4.5 * window.innerHeight) {
+        if (ypos > 4.5 * window.innerHeight && window.innerWidth > 500) {
             cardWidth = '50vw'
             displayType = 'flex'
             active = true
+        } 
+        
+        else if (ypos > 3.75 * window.innerHeight && window.innerWidth < 500) {
+            displayType = 'block'
+            active = true
+            cardHeight = '400px'
         }
     }
 
@@ -37,6 +44,7 @@
             style:background-color={cardColor}
             style:box-shadow={boxShadow}
             style:width={cardWidth}
+            style:height={cardHeight}
             style:display={displayType}
             style:transition-delay={i * 400}ms
         >
@@ -77,7 +85,6 @@
         box-shadow: 0px 30px 30px lightgray;
         border-radius: 10px;
         width: clamp(250px, 10vw, 600px);
-        height: 200px;
         padding: 3ch;
         text-align: center;
         font-family: 'Rubik';
@@ -104,6 +111,10 @@
         width: 25%;
     }
 
+    .image img {
+        width: 150%;
+    }
+
     @media screen and (max-width: 500px) {
         .content-card-wrapper {
             flex-direction: column;
@@ -111,17 +122,23 @@
             gap: 5ch;
         }
 
-        .content-card:hover {
+        .content-card {
             width: 250px;
-            height: 500px;
             display: block;
             text-align: center;
         }
 
-        .content-card:hover .description {
+        .description-active {
             border-left: hidden;
             border-top: solid lightgray 1px;
             padding-left: 0px;
+            color: darkgrey;
+            text-align: center;
+            width: 100%;
+        }
+
+        .image {
+            width: 90%;
         }
 
     }
