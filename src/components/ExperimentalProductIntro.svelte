@@ -3,7 +3,6 @@
 <script>
 
     import { state } from '../stores/dark-mode-state.js';
-    import { onMount } from 'svelte';
 
     let cardColor;
     let boxShadow;
@@ -16,19 +15,15 @@
     // animate on component visibility
 
     let translationPostion = '-100vw';
-    let card;
+    let ypos;
 
-    onMount( () => {
-        window.onscroll = () => {
-
-            let rect = card.getBoundingClientRect().bottom;
-            if (rect <= 0.9 * window.innerHeight) translationPostion = '0';
-            
-        };
-    })
-
-    
+    const animate = () => {
+        if (ypos > window.innerHeight * 0.9) translationPostion = '0'
+    }
+ 
 </script>
+
+<svelte:window bind:scrollY={ypos} on:scroll={animate}/>
 
 <div class="content-card-wrapper">
     <div class="enjoy-fitness-phrase">
@@ -36,7 +31,7 @@
         <hr>
     </div>
     
-    <div class="content-card-translated" bind:this={card}
+    <div class="content-card-translated"
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
         style:transform={`translateX(${translationPostion})`}

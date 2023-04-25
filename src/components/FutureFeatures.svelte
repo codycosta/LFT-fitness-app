@@ -1,8 +1,8 @@
 <!-- breakdown of what to be expected following the alpha of the app (will probably see these in the beta) -->
 
 <script>
-	// import { onMount } from 'svelte';
     import { state } from '../stores/dark-mode-state.js';
+    import { pageContent } from './FutureFeatures.js'
 
     let cardColor;
     let boxShadow;
@@ -12,62 +12,49 @@
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
 
+    let ypos
+    let cards = []
+    let cardWidth = 'clamp(250px, 10vw, 600px)'
+    let displayType
+    let active = false
     
+    const animate = () => {
+        if (ypos > 5 * window.innerHeight) {
+            cardWidth = '50vw'
+            displayType = 'flex'
+            active = true
+        }
+    }
 
 </script>
 
-<div class="content-card-wrapper">
-    <div class="content-card"
-        style:background-color={cardColor}
-        style:box-shadow={boxShadow}
-    >
-        <div>
-            <h5>Calorie Tracking <i class="fa-solid fa-chart-simple" style="color: cornflowerblue;"></i></h5>
+<svelte:window bind:scrollY={ypos} on:scroll={animate}/>
+
+{#each pageContent as {title, description}, i}
+    <div class="content-card-wrapper">
+
+        <div class="content-card" bind:this={cards[i]}
+            style:background-color={cardColor}
+            style:box-shadow={boxShadow}
+            style:width={cardWidth}
+            style:display={displayType}
+            style:transition-delay={i * 400}ms
+        >
+            <div class="title">
+                {@html title}
+            </div>
+
+            <div class="description"
+                class:description-active={active}
+                style:transition-delay={i * 500}ms
+            >
+                {@html description}    
+            </div>
+
         </div>
-        
-        <div class="description">
-            <p>
-                Integrated right into your user dashboard and interface, get a glimpse of
-                both your activity and macros
-            </p>
-        </div>
+
     </div>
-</div>
-
-<div class="content-card-wrapper">
-    <div class="content-card"
-        style:background-color={cardColor}
-        style:box-shadow={boxShadow}
-    >
-        <div>
-            <h5>Mobile Native Platform <i class="fa-brands fa-apple" style="color: steelblue"></i></h5>
-        </div>
-
-        <div class="description">
-            <p>
-                The browser is only the beginning. Release on apple and android is in the works, date TBD
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="content-card-wrapper">
-    <div class="content-card"
-        style:background-color={cardColor}
-        style:box-shadow={boxShadow}
-    >
-        <div>
-            <h5>Gmail Authentication <i class="fa-regular fa-envelope" style="color: red;"></i></h5>
-        </div>
-
-        <div class="description">
-            <p>
-                Wouldn't it be nice to use a verified email right from the get-go?
-                We think so too. Enjoy signing in with google in a future update
-            </p>
-        </div>
-    </div>
-</div>
+{/each}
 
 <style>
     .content-card-wrapper {
@@ -77,9 +64,10 @@
         gap: 6ch;
     }
 
-    .content-card-wrapper h5 {
+    .title {
         font-size: 2rem;
         font-family: 'Rubik';
+        padding-right: 1ch;
     }
 
     .content-card {
@@ -101,17 +89,11 @@
         color: transparent;
     }
 
-    .content-card:hover {
-        width: 40vw;
-        display: flex;
-        gap: 3ch;
-    }
-
-    .content-card:hover .description {
+    .description-active {
         border-left: solid lightgray 1px;
         padding-left: 2ch;
         color: darkgrey;
-        transition: color 500ms 400ms ease-in;
+        transition: color 500ms ease-in;
     }
 
     @media screen and (max-width: 500px) {
