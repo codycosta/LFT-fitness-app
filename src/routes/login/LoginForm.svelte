@@ -114,7 +114,7 @@
     }
 
     .welcome-page video {
-        width: 50%;
+        width: 30%;
         border-radius: 10px;
         border: hidden;
         outline: none;

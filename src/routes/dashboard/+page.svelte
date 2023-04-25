@@ -4,17 +4,14 @@
     import { state } from "../../stores/dark-mode-state"
 
     let mainBackgroundColor;
-    let mainTextColor;
 
     $: {
-        mainBackgroundColor = $state ? '#292B2F' : 'white';
-        mainTextColor = $state ? 'lightgrey' : 'black';
+        mainBackgroundColor = $state ? '#292B2F' : 'whitesmoke';
     }
 </script>
 
 <main
     style:background-color={mainBackgroundColor}
-    style:color={mainTextColor}
 >
     <UserIntroduction />
 

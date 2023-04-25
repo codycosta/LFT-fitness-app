@@ -62,7 +62,7 @@
     <InteractiveCardStack />
 
     <div class="section-break">
-        <p>What's available <strong style:color={sectionBreakStrongWordColor}>now</strong>?</p>
+        <p>Explore <strong style:color={sectionBreakStrongWordColor}>more</strong></p>
         <p class="section-support-description">
             we want to first cultivate the best exercise experience for our users before expanding into futher territory
         </p>

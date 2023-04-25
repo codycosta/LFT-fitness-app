@@ -2,6 +2,7 @@
 
 <script>
     import { state } from '../stores/dark-mode-state.js';
+    import { onMount } from 'svelte';
 
     let cardColor;
     let boxShadow;
@@ -10,6 +11,24 @@
         cardColor = $state ? '#36393F' : 'whitesmoke';
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
+
+    // entry animation when components become visible
+
+    let translationPostion = '-100vw';
+
+    let card;
+
+    onMount( () => {
+
+        window.onscroll = () => {
+            let rect = card.getBoundingClientRect().bottom;
+            if (rect <= 0.9 * window.innerHeight) {
+                translationPostion = '0';
+            }
+        }
+        
+    })
+
 </script>
 
 <div class="content-card-wrapper">
@@ -18,9 +37,10 @@
         <hr>
     </div>
     
-    <div class="content-card"
+    <div class="content-card" bind:this={card}
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
+        style:transform={`translateX(${translationPostion})`}
     >
         <p>
             Let L F T do the heavy lifting (pun intended) for you, so you can 
@@ -33,6 +53,8 @@
     <div class="content-card"
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
+        style:transform={`translateX(${translationPostion})`}
+        style:transition-delay=200ms
     >
         <p>
             Keep browsing to find out more about what LFT has to offer 
@@ -45,6 +67,8 @@
     <div class="content-card"
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
+        style:transform={`translateX(${translationPostion})`}
+        style:transition-delay=400ms
     >
         <p>
             or create a free account to discover its full potential

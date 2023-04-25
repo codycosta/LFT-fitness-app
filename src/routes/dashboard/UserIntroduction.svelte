@@ -6,24 +6,25 @@
     let cardColor;
 
     $: {
-        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(230, 230, 230), -10px -10px 0px white';
+        boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px white';
         cardColor = $state ? '#36393F' : 'whitesmoke';
     }
 </script>
 
-<div class="user-intro">
-    <span>Hi, username!</span>
+<div class="section-header">
+    <span>Summary</span>
+    <img src="/favicon.png" alt="profile logo">
 </div>
 
 <div class="daily-status">
-    <div class="content-region" style:background-color={cardColor}>
-        <p class="heading">Today's metrics</p>
-        <div class="card" style:box-shadow={boxShadow}>
+    <div class="content-region" style:background-color={cardColor} style:box-shadow={boxShadow}>
+        <p class="heading" >Today's metrics</p>
+        <div class="card">
 
             <BarGraph calories={40} exercise={20} streak={30}/>
 
         </div>
-        <div class="card" style:box-shadow={boxShadow}>
+        <div class="card">
             <p>today's plan</p>
             <ul>
                 <li>any scheduled workouts?</li>
@@ -33,14 +34,14 @@
         </div>
     </div>
 
-    <div class="content-region" style:background-color={cardColor}>
+    <div class="content-region" style:background-color={cardColor} style:box-shadow={boxShadow}>
         <p class="heading">Yesterday's metrics</p>
-        <div class="card" style:box-shadow={boxShadow}>
+        <div class="card">
 
             <BarGraph calories={90} exercise={76} streak={50}/>
 
         </div>
-        <div class="card" style:box-shadow={boxShadow}>
+        <div class="card">
             <p>quick recap</p>
             <ul>
                 <li>routine done + length</li>
@@ -53,12 +54,22 @@
 </div>
 
 <style>
-    .user-intro {
+    .section-header {
         display: flex;
-        justify-content: center;
-        padding-top: 100px;
+        justify-content: space-between;
+        padding: 70px 30px 0px 30px;
         font-family: 'Rubik';
         font-size: 2rem;
+        color: darkgrey;
+        font-weight: bold;
+    }
+
+    .section-header img {
+        width: 30px;
+        height: 30px;
+        background-color: tomato;
+        padding: 10px;
+        border-radius: 50%;
     }
 
     .daily-status {
