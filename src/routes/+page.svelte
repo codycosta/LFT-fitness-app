@@ -42,7 +42,7 @@
     
     <div class="section-break">
         <p>working out can be <strong style:color={sectionBreakStrongWordColor}>challenging</strong>...</p>
-        <p class="section-support-description">but getting into shape doesn't have to be</p>
+        <!-- <p class="section-support-description">but getting into shape doesn't have to be</p> -->
         <video src="/gifs/marginalia-downloading.webm" autoplay loop>
             <track kind="captions">
         </video>
@@ -54,18 +54,18 @@
         <p>
             View LFT at its  <strong style:color={sectionBreakStrongWordColor}>core</strong>
         </p>
-        <p class="section-support-description">
+        <!-- <p class="section-support-description">
             this is the foundation of LFT in its pre-alpha stage, with much more on the way!
-        </p>
+        </p> -->
     </div>
 
     <InteractiveCardStack />
 
     <div class="section-break">
         <p>Explore <strong style:color={sectionBreakStrongWordColor}>more</strong></p>
-        <p class="section-support-description">
+        <!-- <p class="section-support-description">
             we want to first cultivate the best exercise experience for our users before expanding into futher territory
-        </p>
+        </p> -->
         <p class="section-support-description">
             <strong style:color={sectionBreakStrongWordColor}>dev notes</strong>: let's include gif/video footage of use in both desktop and mobile formats
         </p>
@@ -76,9 +76,9 @@
 
     <div class="section-break">
         <p>What's <strong style:color={sectionBreakStrongWordColor}>next</strong>?</p>
-        <p class="section-support-description">
+        <!-- <p class="section-support-description">
             we belive in transparency and want to give our users a clear image of the roadmap
-        </p>
+        </p> -->
     </div>
 
     <FutureFeatures />

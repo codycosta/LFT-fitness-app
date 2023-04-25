@@ -18,7 +18,7 @@
     let ypos;
 
     const animate = () => {
-        if (ypos > window.innerHeight * 0.9) translationPostion = '0'
+        if (ypos > window.innerHeight) translationPostion = '0'
     }
  
 </script>
@@ -83,7 +83,7 @@
     }
 
     .content-card-wrapper h5 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-family: 'Rubik';
     }
 
@@ -97,14 +97,14 @@
         font-family: 'Rubik';
         color: darkgray;
         background-color: whitesmoke;
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: 500ms;
     }
 
     .enjoy-fitness-phrase {
         color: darkgrey;
         font-family: 'Nothing You Could Do';
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     @media screen and (max-width: 500px) {

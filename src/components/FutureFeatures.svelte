@@ -19,7 +19,7 @@
     let active = false
     
     const animate = () => {
-        if (ypos > 5 * window.innerHeight) {
+        if (ypos > 4.5 * window.innerHeight) {
             cardWidth = '50vw'
             displayType = 'flex'
             active = true
@@ -30,7 +30,7 @@
 
 <svelte:window bind:scrollY={ypos} on:scroll={animate}/>
 
-{#each pageContent as {title, description}, i}
+{#each pageContent as {title, description, image}, i}
     <div class="content-card-wrapper">
 
         <div class="content-card" bind:this={cards[i]}
@@ -51,6 +51,10 @@
                 {@html description}    
             </div>
 
+            <div class="image">
+                <img src={image} alt="picture {i}">
+            </div>
+
         </div>
 
     </div>
@@ -61,11 +65,10 @@
         padding: 50px 0;
         display: flex;
         justify-content: center;
-        gap: 6ch;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-family: 'Rubik';
         padding-right: 1ch;
     }
@@ -80,7 +83,7 @@
         font-family: 'Rubik';
         color: darkgray;
         background-color: whitesmoke;
-        font-size: 1.2rem;
+        font-size: 1rem;
         transition: 400ms;
         overflow: hidden;
     }
@@ -94,6 +97,11 @@
         padding-left: 2ch;
         color: darkgrey;
         transition: color 500ms ease-in;
+        width: 50%;
+    }
+
+    .image {
+        width: 25%;
     }
 
     @media screen and (max-width: 500px) {

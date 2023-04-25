@@ -9,6 +9,7 @@
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px white';
         cardColor = $state ? '#36393F' : 'whitesmoke';
     }
+
 </script>
 
 <div class="section-header">
@@ -21,7 +22,7 @@
         <p class="heading" >Today's metrics</p>
         <div class="card">
 
-            <BarGraph calories={40} exercise={20} streak={30}/>
+            <BarGraph calories={40} exercise={20} streak={50}/>
 
         </div>
         <div class="card">

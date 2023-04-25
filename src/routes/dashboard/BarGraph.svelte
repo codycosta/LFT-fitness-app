@@ -64,21 +64,19 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 40%;
         width: 100%;
         background-color: skyblue;
         text-align: center;
         color: white;
+        transition: height 500ms;
     }
 
     #exercise .progress{
         background-color: hotpink;
-        height: 80%;
     }
 
     #streak .progress {
         background-color: #34EBC3;
-        height: 65%;
     }
 
     @media screen and (max-width: 500px) {
