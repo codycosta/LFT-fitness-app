@@ -1,6 +1,7 @@
 <!-- content card for quick product selling point (testing a new design) -->
 
 <script>
+
     import { state } from '../stores/dark-mode-state.js';
     import { onMount } from 'svelte';
 
@@ -12,23 +13,21 @@
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
 
-    // entry animation when components become visible
+    // animate on component visibility
 
     let translationPostion = '-100vw';
-
     let card;
 
     onMount( () => {
-
         window.onscroll = () => {
+
             let rect = card.getBoundingClientRect().bottom;
-            if (rect <= 0.9 * window.innerHeight) {
-                translationPostion = '0';
-            }
-        }
-        
+            if (rect <= 0.9 * window.innerHeight) translationPostion = '0';
+            
+        };
     })
 
+    
 </script>
 
 <div class="content-card-wrapper">
@@ -37,7 +36,7 @@
         <hr>
     </div>
     
-    <div class="content-card" bind:this={card}
+    <div class="content-card-translated" bind:this={card}
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
         style:transform={`translateX(${translationPostion})`}
@@ -50,11 +49,11 @@
         <h5 style="color: black"><i class="fa-solid fa-dumbbell"></i></h5>
     </div>
 
-    <div class="content-card"
+    <div class="content-card-translated"
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
         style:transform={`translateX(${translationPostion})`}
-        style:transition-delay=200ms
+        style:transition-delay=300ms
     >
         <p>
             Keep browsing to find out more about what LFT has to offer 
@@ -64,11 +63,11 @@
         </h5>
     </div>
 
-    <div class="content-card"
+    <div class="content-card-translated"
         style:background-color={cardColor}
         style:box-shadow={boxShadow}
         style:transform={`translateX(${translationPostion})`}
-        style:transition-delay=400ms
+        style:transition-delay=600ms
     >
         <p>
             or create a free account to discover its full potential
@@ -93,7 +92,7 @@
         font-family: 'Rubik';
     }
 
-    .content-card {
+    .content-card-translated {
         box-shadow: 0px 30px 30px lightgray;
         border-radius: 10px;
         width: clamp(250px, 10vw, 600px);

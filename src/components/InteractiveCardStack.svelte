@@ -45,7 +45,7 @@
         font-size: 1.4rem;
         font-family: 'Rubik';
         padding: 2ch;
-        transition: 500ms;
+        transition: 400ms;
     }
 
     .heading {
@@ -64,7 +64,6 @@
 
     #hidden {
         background-color: transparent;
-        box-shadow: none;
         transition: none;
     }
 
@@ -113,25 +112,6 @@
         transform: translate(30vw, 0vw) rotate(0deg);
     }
 
-    .card-stack:hover #top-card:hover {
-        transform: translate(-30vw, 0vw) scale(1.05);
-        z-index: 2;
-    }
-
-    .card-stack:hover #card-2:hover {
-        transform: translate(-10vw, 0vw) scale(1.05);
-        z-index: 2;
-    }
-
-    .card-stack:hover #card-3:hover {
-        transform: translate(10vw, 0vw) scale(1.05);
-        z-index: 2;
-    }
-
-    .card-stack:hover #card-4:hover {
-        transform: translate(30vw, 0vw) scale(1.05);
-        z-index: 2;
-    }
 
     @media screen and (max-width: 500px) {
         .card {
@@ -139,7 +119,7 @@
         }
 
         #hidden {
-            transition: 500ms;
+            transition: 400ms;
         }
 
         .card-stack:hover #top-card {
@@ -156,27 +136,6 @@
 
         .card-stack:hover #card-4 {
             transform: translate(0vw, 105vh) rotate(0deg);
-        }
-
-
-        .card-stack:hover #top-card:hover {
-            transform: translate(0vw, 0vh);
-            z-index: 2;
-        }
-
-        .card-stack:hover #card-2:hover {
-            transform: translate(0vw, 35vh);
-            z-index: 2;
-        }
-
-        .card-stack:hover #card-3:hover {
-            transform: translate(0vw, 70vh);
-            z-index: 2;
-        }
-
-        .card-stack:hover #card-4:hover {
-            transform: translate(0vw, 105vh);
-            z-index: 2;
         }
 
         .card-stack:hover #hidden {

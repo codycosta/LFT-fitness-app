@@ -1,6 +1,7 @@
 <!-- breakdown of what to be expected following the alpha of the app (will probably see these in the beta) -->
 
 <script>
+	// import { onMount } from 'svelte';
     import { state } from '../stores/dark-mode-state.js';
 
     let cardColor;
@@ -10,6 +11,9 @@
         cardColor = $state ? '#36393F' : 'whitesmoke';
         boxShadow = $state ? '10px 10px 0px #202225' : '10px 10px 0px rgb(220, 220, 220), -10px -10px 0px rgb(250, 250, 250)';
     }
+
+    
+
 </script>
 
 <div class="content-card-wrapper">
@@ -83,7 +87,6 @@
         border-radius: 10px;
         width: clamp(250px, 10vw, 600px);
         height: 200px;
-        /* aspect-ratio: 1; */
         padding: 3ch;
         text-align: center;
         font-family: 'Rubik';
@@ -105,7 +108,6 @@
     }
 
     .content-card:hover .description {
-        display: block;
         border-left: solid lightgray 1px;
         padding-left: 2ch;
         color: darkgrey;
