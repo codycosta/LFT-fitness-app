@@ -33,20 +33,17 @@
 
     let currentSrc = 0;
     let dir;
-    let progress = .33;
 
     const increment = () => {
         if (currentSrc === 2) return
         currentSrc += 1;
         dir = 1;
-        progress += .33;
     }
 
     const decrement = () => {
         if (currentSrc === 0) return
         currentSrc -= 1;
         dir = -1;
-        progress -= .33;
     }
 
 </script>
