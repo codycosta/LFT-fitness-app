@@ -3,6 +3,7 @@
 <script>
 
     import { state } from "../../stores/dark-mode-state";
+    import { fly } from "svelte/transition";
 
     let backgroundColor;
     let textColor;
@@ -18,6 +19,36 @@
         imgSrc = $state ? "url('/images/unsplash-vector-background.jpg')" : "url('/images/unsplash-vector-bg2.jpg')";
     }
 
+    const videoSources = [
+        "/gifs/marginalia-downloading.webm",
+        "/gifs/keyboard-cat-gif.webm",
+        "/gifs/meditation-gif.webm"
+    ];
+
+    const paragraphs = [
+        "hit new personal records",
+        "enjoy silly cats",
+        "document your journey"
+    ]
+
+    let currentSrc = 0;
+    let dir;
+    let progress = .33;
+
+    const increment = () => {
+        if (currentSrc === 2) return
+        currentSrc += 1;
+        dir = 1;
+        progress += .33;
+    }
+
+    const decrement = () => {
+        if (currentSrc === 0) return
+        currentSrc -= 1;
+        dir = -1;
+        progress -= .33;
+    }
+
 </script>
 
 <div class="wrapper">
@@ -25,12 +56,36 @@
     <div class="welcome-page"
         style:box-shadow={boxShadow}
         style:background-color={backgroundColor}>
+
         <div class="welcome-text" style:color={emphasisColor}>
             <h2>Take charge of your fitness</h2>
         </div>
-        <video src="/gifs/marginalia-downloading.webm" autoplay loop>
-            <track kind="captions">
-        </video>
+
+        <div class="gallery">
+
+            <button on:click={decrement}> <i class="fa-solid fa-arrow-left"></i> </button>
+
+            {#key currentSrc}
+
+                <div class="container" in:fly={{ x: dir * 200, duration: 600, delay: 150 }}>
+                    <video src={videoSources[currentSrc]} autoplay loop>
+                        <track kind="captions">
+                    </video>
+                    <p>{paragraphs[currentSrc]}</p>
+                </div>
+
+            {/key}
+
+            <button on:click={increment}> <i class="fa-solid fa-arrow-right"></i> </button>
+
+        </div>
+
+        <div class="progress-indicator">
+            <button style:background-color={currentSrc === 0 ? emphasisColor : 'lightgrey'}/>
+            <button style:background-color={currentSrc === 1 ? emphasisColor : 'lightgrey'}/>
+            <button style:background-color={currentSrc === 2 ? emphasisColor : 'lightgrey'}/>
+        </div>
+        
     </div>
 
     <div class="registration-form" 
@@ -89,7 +144,7 @@
         display: grid;
         place-items: center;
         font-size: 2rem;
-        font-family: 'Nothing You Could Do';
+        font-family: 'Rubik';
         color: darkgrey;
         position: relative;
         border-radius: 15px;
@@ -104,11 +159,57 @@
         transition: 500ms;
     }
 
-    .welcome-page video {
-        width: 30%;
+    .gallery {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+        margin: 150px 100px 0px 100px;
+    }
+
+    .container {
+        width: 500px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery p {
+        text-align: center;
+        font-family: 'Nothing You Could Do';
+    }
+
+    .container video {
+        height: 270px;
         border-radius: 10px;
         border: hidden;
         outline: none;
+    }
+
+    .gallery button {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        outline: none;
+        border: hidden;
+        color: white;
+        transition: 200ms;
+        background-color: lightgrey;
+    }
+
+    .gallery button:hover {
+        background-color: tomato;
+    }
+
+    .progress-indicator button {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: hidden;
+        outline: none;
+        margin: 0px 30px;
+        transition: 500ms;
     }
 
     .registration-form {
@@ -182,7 +283,7 @@
             padding: 2ch 0;
         }
 
-        video {
+        .gallery {
             display: none;
         }
 
