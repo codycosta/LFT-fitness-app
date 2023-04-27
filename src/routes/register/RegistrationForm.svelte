@@ -52,35 +52,32 @@
 
     <div class="welcome-page"
         style:box-shadow={boxShadow}
-        style:background-color={backgroundColor}>
+        style:background-color={backgroundColor}
+    >
 
         <div class="welcome-text" style:color={emphasisColor}>
             <h2>Take charge of your fitness</h2>
         </div>
 
-        <div class="gallery">
-
-            <button on:click={decrement}> <i class="fa-solid fa-arrow-left"></i> </button>
-
-            {#key currentSrc}
-
-                <div class="container" in:fly={{ x: dir * 200, duration: 600, delay: 150 }}>
-                    <video src={videoSources[currentSrc]} autoplay loop>
-                        <track kind="captions">
-                    </video>
-                    <p>{paragraphs[currentSrc]}</p>
-                </div>
-
-            {/key}
-
-            <button on:click={increment}> <i class="fa-solid fa-arrow-right"></i> </button>
-
+        {#key currentSrc}
+        
+        <div class="container" in:fly={{ x: dir * 200, duration: 600, delay: 150 }}>
+            <video src={videoSources[currentSrc]} autoplay loop>
+                <track kind="captions">
+            </video>
         </div>
-
+        <p class="description">{paragraphs[currentSrc]}</p>
+            
+        {/key}
+               
         <div class="progress-indicator">
-            <button style:background-color={currentSrc === 0 ? emphasisColor : 'lightgrey'}/>
-            <button style:background-color={currentSrc === 1 ? emphasisColor : 'lightgrey'}/>
-            <button style:background-color={currentSrc === 2 ? emphasisColor : 'lightgrey'}/>
+            <button class="toggle-content" on:click={decrement}> <i class="fa-solid fa-arrow-left"></i> </button>
+
+            <button class="progress-blip" style:background-color={currentSrc === 0 ? emphasisColor : 'lightgrey'}/>
+            <button class="progress-blip" style:background-color={currentSrc === 1 ? emphasisColor : 'lightgrey'}/>
+            <button class="progress-blip" style:background-color={currentSrc === 2 ? emphasisColor : 'lightgrey'}/>
+            
+            <button class="toggle-content" on:click={increment}> <i class="fa-solid fa-arrow-right"></i> </button>
         </div>
         
     </div>
@@ -135,11 +132,8 @@
     }
 
     .welcome-page {
-        background-size: cover;
         width: 50vw;
         height: 80vh;
-        display: grid;
-        place-items: center;
         font-size: 2rem;
         font-family: 'Rubik';
         color: darkgrey;
@@ -149,42 +143,30 @@
     }
 
     .welcome-text {
-        position: absolute;
-        top: 0;
         text-align: center;
         padding: 1ch;
         transition: 500ms;
     }
 
-    .gallery {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 50px;
-        margin: 150px 100px 0px 100px;
-    }
 
     .container {
-        width: 500px;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        place-items: center;
     }
 
-    .gallery p {
+    .description {
         text-align: center;
         font-family: 'Nothing You Could Do';
     }
 
     .container video {
-        height: 270px;
+        width: 20vw;
         border-radius: 10px;
         border: hidden;
         outline: none;
     }
 
-    .gallery button {
+    .toggle-content {
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -193,13 +175,24 @@
         color: white;
         transition: 200ms;
         background-color: lightgrey;
+        margin: 0 40px;
     }
 
-    .gallery button:hover {
+    .toggle-content:hover {
         background-color: tomato;
     }
 
-    .progress-indicator button {
+    .progress-indicator {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .progress-blip {
         height: 15px;
         width: 15px;
         border-radius: 50%;
@@ -280,14 +273,14 @@
             padding: 2ch 0;
         }
 
-        .gallery {
+        .container, .description, .progress-indicator {
             display: none;
         }
 
         .welcome-text {
-            top: 0;
             font-size: 1.5rem;
-            transform: rotate(0deg);
+            position: absolute;
+            top: 0;
         }
 
         .registration-form {
