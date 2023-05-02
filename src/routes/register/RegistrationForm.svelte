@@ -65,8 +65,8 @@
             <video src={videoSources[currentSrc]} autoplay loop>
                 <track kind="captions">
             </video>
+            <p class="description">{paragraphs[currentSrc]}</p>
         </div>
-        <p class="description">{paragraphs[currentSrc]}</p>
             
         {/key}
                
